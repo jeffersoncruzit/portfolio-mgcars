@@ -1,0 +1,147 @@
+/* CARD */
+
+.c-boxlinks {
+  color: #ffffff;
+  @include clearfix();
+  h2 {
+    z-index: 1;
+    position: relative;
+    @include breakpoint($s-desktop) {
+      text-align: right;
+    }
+  }
+  p {
+    z-index: 1;
+    position: relative;
+    font-size: 14px;
+    margin: 10px 0 20px 0;
+    line-height: initial;
+    text-align: left;
+    @include breakpoint($s-desktop) {
+      text-align: right;
+    }
+  }
+  .o-button {
+    z-index: 1;
+    position: relative;
+  }
+  .o-imgWrap {
+    z-index: 1;
+    position: relative;
+    img {
+      width: 100%;
+    }
+  }
+  .o-textWrap {
+    z-index: 1;
+    position: relative;
+    @include clearfix();
+  }
+  .o-boxlinks__card {
+    position: relative;
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    background: #000000;
+    padding: 20px;
+    overflow: hidden;
+    @include breakpoint(768px) {
+      padding: 40px;
+    }
+    @include breakpoint($s-desktop) {
+      padding: 20px 50px;
+      text-align: right;
+      display: inline-block;
+      width: 50%;
+      float: left;
+      height: 270px;
+    }
+    &:nth-child(2) {
+      background: url($asset_url + "/images/bg-heritage.jpg");
+      background-size: cover;
+    }
+    &:nth-child(3) {
+      background: url($asset_url + "/images/bg-news.jpg");
+      background-size: cover;
+    }
+    &:nth-child(4) {
+      background: url($asset_url + "/images/bg-dealers.jpg");
+      background-size: cover;
+    }
+    &:nth-child(5) {
+      background: url($asset_url + "/images/bg-services.jpg");
+      background-size: cover;
+    }
+    .o-textWrap {
+      @include breakpoint($s-desktop) {
+        width: 60%;
+        float: right;
+      }
+    }
+  }
+
+  .o-boxlinks__card--full {
+    padding: 40px 20px;
+    @include breakpoint(768px) {
+      padding: 40px;
+    }
+    @include breakpoint($s-desktop) {
+      position: relative;
+      padding: 0;
+      height: auto;
+      width: 100%;
+    }
+    @include breakpoint($s-desktop) {
+    }
+    .o-textWrap {
+      @include breakpoint($s-desktop) {
+        width: 45%;
+        @include align-y();
+        right: 50px;
+      }
+      @include breakpoint($s-desktop) {
+        width: 40%;
+        @include align-y();
+        right: 50px;
+      }
+    }
+    .o-imgWrap {
+      width: 100%;
+      margin-left: -20px;
+      @include breakpoint(768px) {
+        margin-left: -40px;
+      }
+      @include breakpoint($s-desktop) {
+        width: 50%;
+        left: 0;
+        bottom: 0;
+        margin-top: 35px;
+      }
+      @include breakpoint(1300px) {
+        width: 55%;
+      }
+      @include breakpoint(1500px) {
+        width: 57%;
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    .o-boxlinks__imgBg {
+      z-index: 0;
+      @include align-xy();
+      width: 90%;
+      max-width: 300px;
+      @include breakpoint($s-desktop) {
+        width: 105%;
+        max-width: 105%;
+      }
+    }
+    .o-button {
+      @include breakpoint($s-desktop) {
+        float: right;
+      }
+    }
+  }
+}

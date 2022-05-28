@@ -1,0 +1,60 @@
+// SLIDER
+.c-slider {
+	position: relative;
+	@include clearfix();
+	width: 100%;
+	.o-slider__wrap {
+		@include clearfix();
+		width: 100%;
+	}
+	.o-imgWrap {
+		display: block;
+		width: 100%;
+	}
+	img {
+		display: block;
+		width: 100%;
+	}
+	.slick-slide {
+	    outline: none
+	}
+}
+.c-slider--home {
+	.slick-dots {
+		position: absolute;
+		bottom: 0px;
+		@include align-x();
+		@include breakpoint($s-desktop) {
+			transform: none;
+			left: 50px;
+			bottom: 20px;
+		}
+		li {
+			display: inline-block;
+			margin-right: 10px;
+			overflow: hidden;
+			&:last-child {
+				margin: 0;
+			}
+			&:hover,&.slick-active {
+				cursor: pointer;
+				button {
+					background-color: #e91112;	
+				}
+			}
+		}
+		button {
+			border: 0;
+			padding: 0;
+			background-color: #808080;
+			@include circle(10px);
+			color: transparent;
+			@include breakpoint($s-mobile) {
+				@include circle(15px);
+			}
+			@include breakpoint($s-desktop) {
+				@include circle(20px);
+			}
+		}
+	}
+}

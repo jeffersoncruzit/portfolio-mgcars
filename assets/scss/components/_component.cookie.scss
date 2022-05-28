@@ -1,0 +1,75 @@
+.c-cookie {
+	z-index: 10;
+	@include clearfix();
+	display: none;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	padding: 20px 30px;
+	background-color: transparentize(#000000, 0.1);
+	h4 {
+		@extend .o-heading__h3;
+		font-family: $font-primary;
+		display: block;
+		text-align: left;
+		color: #ffffff;
+		margin-bottom: 10px;
+		@include breakpoint($s-tablet) {
+			font-size: 22px;
+		}
+	}
+	p {
+		@extend .o-paragraph;
+		color: #ffffff;
+		font-size: 18px;
+		margin-bottom: 0;
+		font-style: italic;
+	}
+	a {
+		@extend .o-paragraph;
+		color: #ffffff;
+		padding-right: 15px;
+		font-size: 18px;
+		width: auto;
+		vertical-align: middle;
+		margin-bottom: 0;
+		text-decoration: underline;
+	}
+	.o-cookie__link {
+		vertical-align: middle;
+	}
+	.o-button {
+		background-color: $c-primary;
+		color: #ffffff;
+		@include breakpoint($s-desktop) {
+			width: 150px;
+		}
+	}
+	.o-cookie__content {
+		@include clearfix();
+		display: block;
+		margin: 0 auto;
+		max-width: 700px;
+		@include breakpoint($s-desktop) {
+			max-width: 1000px;
+		}
+	}
+	.o-cookie__leftWrap {
+		display: block;
+		margin-bottom: 15px;
+		@include breakpoint($s-desktop) {
+			display: inline-block;
+			width: 60%;
+			vertical-align: middle;
+		}
+	}
+	.o-cookie__rightWrap {
+		display: block;
+		text-align: center;
+		@include breakpoint($s-desktop) {
+			display: inline-block;
+			width: 39%;
+			verical-align: middle;
+		}
+	}
+}

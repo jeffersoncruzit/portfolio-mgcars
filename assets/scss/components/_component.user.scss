@@ -1,0 +1,76 @@
+/* USER */
+
+.c-user__form{
+	text-align: center;
+	.o-colWrap{
+		@include breakpoint(550px){
+			display: inline-block;
+			width: 49%;
+		}
+	}
+	.o-colWrap:nth-of-type(2){
+		@include breakpoint(768px){
+			text-align: left;
+			float: none;
+		}
+	}
+	.o-colWrap:nth-of-type(5){
+		display: block;
+	}
+	label{
+		text-align: left;
+		display: block;
+	}
+	input, select{
+		width: 95%;
+		padding: 10px;
+		font-size: 14px;
+		margin: 10px 0; 
+		border: 1px solid #000000;
+	}
+	select{
+		cursor: pointer;
+		@include border-radius(3px);
+		@include breakpoint(768px){
+			padding: 5px;
+			width: 50%;
+		}
+	}
+	button{
+		width: 100%;
+		margin: 5px 0;
+    padding: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    @include border-radius(3px);
+    &:nth-of-type(1){
+      background: #019cde;
+      border: 1px solid #019cde;
+    }
+    &:nth-of-type(2){
+      background: #e74c3c;
+      border: 1px solid #e74c3c;
+    }
+    &.--disabled{
+      background: #95a5a6;
+      border: 1px solid #95a5a6;
+    }
+    @include breakpoint(425px){
+			display: inline-block;
+			width: 49%;
+    }
+    @include breakpoint(768px){
+      width: 120px;
+    }
+  }
+  .o-error{
+  	@include breakpoint(550px){
+  		text-align: left;
+  		margin-left: 10px;
+  	}
+  }
+	@include breakpoint(768px){
+		text-align: left;
+		padding: 20px;
+	}
+}

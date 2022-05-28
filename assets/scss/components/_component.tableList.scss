@@ -1,0 +1,149 @@
+//Responsive Table List
+table.c-tableList { 
+  width: 100%; //default - table
+  display: block;
+  thead{
+		display: block; //default - table-header-group
+		tr{
+			background: #019cde;
+			padding: 10px;
+			@include border-radius(3px);
+			th, td{
+				color: white;
+				font-weight: 500;
+				font-size: 16px;
+			}
+		}
+		tr:first-of-type{
+			display: block;
+		}
+		tr:last-of-type{
+			display: none;
+		}
+	}
+	tbody{
+		display: block;
+		th{
+			display: block;
+		}
+		tr{
+			display: block;
+			position: relative;
+			text-align: center;
+			padding: 10px;
+			&::after {
+				display:block;
+			  content: '';
+			  position: absolute;
+			  bottom: 0;
+			  left: 0;
+			  right: 0;
+			  margin: auto;
+			  width: 98%;
+			  height: 1px;
+			  background:  #bdc3c7;
+			}
+		}
+		td{
+			display: block; //default - table-cell
+			text-align: right;
+			padding: 5px 0;
+			a{
+		  	color: #019cde;
+		  	padding: 0 5px;
+		  	margin: 0 5px;
+		  	text-decoration: none;
+		  	&:hover{
+		  		cursor: pointer;
+		  	}
+		  }
+		  &:nth-of-type(2){
+				white-space: nowrap;
+		  }
+			&:before{
+				float: left;
+				text-align: left;
+				font-weight: 500;
+				margin: 5px 0;
+			}
+			&:nth-of-type(1):before { content: "Username"; }
+			&:nth-of-type(2):before { content: "Full name"; }
+			&:nth-of-type(3):before { content: "Email Address"; }
+			&:nth-of-type(4):before { content: "User Level"; }
+			&:nth-of-type(5):before { content: "Actions"; }
+		}
+	}
+	/* === Desktop View === */
+	@include breakpoint(1024px){
+		display: table;
+		width: 100%; 
+  	border-collapse: collapse;
+  	thead{
+			display: table-header-group;
+			tr{
+				display: table-row;
+				text-align: center;
+				&:first-of-type{
+					display: none;
+				}
+				&:last-of-type{
+					display: table-row;
+				}
+			}
+			th{
+				display: table-cell;
+				padding: 10px;
+				&:nth-of-type(1){
+					@include border-left-radius(3px);
+				}
+				&:nth-of-type(5){
+					@include border-right-radius(3px);
+				}
+			}
+		}
+		tbody{
+			display: table-row-group;
+			tr{
+				display: table-row;
+				text-align: center;
+				&::after {
+					display: none;
+				}
+			}
+			td{
+				position: relative;
+				display: table-cell;
+				text-align: center;
+				max-width: 100px;
+				padding: 10px;
+				overflow: hidden;
+				cursor: pointer;
+				transition: max-width ease 300ms;
+				&:before{
+					display: none;
+				}
+				&:hover{
+					max-width: 500px;
+				}
+				&:nth-of-type(n+4){ 
+					width: 130px; 
+				}
+				a{
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+
+.--zebra{ //zebra striping
+	tbody{
+		tr{
+			&:nth-of-type(odd) {
+			  background: #eee; 
+			}
+		}
+	}
+}
+
+

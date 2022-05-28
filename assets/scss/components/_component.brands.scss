@@ -1,0 +1,57 @@
+// BRANDS
+
+.c-brands{
+	padding: 20px;
+	h1{
+		color: #163891;
+	}
+	h3{
+		color: #222222;
+		font-family: $font-secondary;
+		transition: color ease 300ms;
+	}
+	p{
+		color: #222222;
+	}
+	.o-brandsWrap{
+		max-width: 1000px;
+		margin: 20px auto;
+	}
+	.o-brands__brand{
+		display: inline-block;
+		margin: 10px 0;
+		width: 49%;
+		text-align: center;
+		text-decoration: none;
+		.o-imgWrap img{
+			filter: gray; /* IE6-9 */
+		  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+		  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+		  transition: all ease 300ms;
+		}
+		&:hover{
+			h3{
+				color: #ffc600;
+			}
+			.o-imgWrap img{
+				-webkit-filter: grayscale(0);
+  			filter: none;
+			}
+		}
+		&:first-of-type{
+			h3{
+				color: #ffc600;
+			}
+			.o-imgWrap img{
+				-webkit-filter: grayscale(0);
+  			filter: none;
+			}
+		}
+		@include breakpoint(768px){
+			width: 32%;
+		}
+		@include breakpoint(1024px){
+			width: 19%;
+		}
+	}
+}

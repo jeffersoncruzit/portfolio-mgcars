@@ -1,0 +1,53 @@
+.o-label {
+	display: block;
+	font-family: 'Lora';
+	font-size: 17px;
+	font-weight: bold;
+	color: #000000;
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+%o-label__icon {
+	position: relative;
+	padding-left: 40px;
+	&:before {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		content: '';
+		width: 17px;
+		height: 17px;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}
+
+.o-label__icon--location {
+	@extend %o-label__icon;
+	&:before {
+		// background-image: url('../img/navigation.svg');
+	}
+}
+
+.o-label__icon--phone {
+	@extend %o-label__icon;
+	&:before {
+		// background-image: url('../img/phone-receiver.svg');
+	}
+}
+
+.o-label__icon--fax {
+	@extend %o-label__icon;
+	&:before {
+		// background-image: url('../img/fax.svg');
+	}
+}
+
+.o-label__icon--email {
+	@extend %o-label__icon;
+	&:before {
+		// background-image: url('../img/close-envelope.svg');
+	}
+}

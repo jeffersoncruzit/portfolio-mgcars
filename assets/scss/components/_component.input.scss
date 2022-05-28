@@ -1,0 +1,128 @@
+// RADIO BUTTON CUSTOMIZE
+.c-radio__wrap {
+	padding:$p-s $p-none;
+
+  	input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+
+    + .c-radio--label {
+      &:before {
+        content: '';
+        background: $c-black;
+        border-radius: 100%;
+        border: 1px solid darken($c-black, 25%);
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 0px;
+        margin-right: 8px; 
+        vertical-align: top;
+        cursor: pointer;
+        text-align: center;
+        transition: all 250ms ease;
+      }
+    }
+
+    &:checked {
+      + .c-radio--label {
+        &:before {
+          background-color: $c-white;
+          box-shadow: inset 0 0 0 4px $c-black;
+        }
+      }
+    }
+
+    &:focus {
+      + .c-radio--label {
+        &:before {
+          outline: none;
+          // border-color: $c-white;
+        }
+      }
+    }
+
+    &:disabled {
+      + .c-radio--label {
+        &:before {
+          box-shadow: inset 0 0 0 4px $c-black;
+          border-color: darken($c-black, 25%);
+          background: darken($c-black, 25%);
+        }
+      }
+    }
+    
+    + .c-radio--label {
+      &:empty {
+        &:before {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+// CHECKBOX
+.c-checkbox__wrap {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  // Box.
+  & + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: $c-primary;
+  }
+
+  // Box hover
+  &:hover + label:before {
+    background: $c-primary;
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: $c-primary;
+  }
+  
+  // Disabled state label.
+  &:disabled + label {
+    color: $c-black;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background: $c-secondary;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: $c-white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 
+      2px 0 0 $c-white,
+      4px 0 0 $c-white,
+      4px -2px 0 $c-white,
+      4px -4px 0 $c-white,
+      4px -6px 0 $c-white,
+      4px -8px 0 $c-white;
+    transform: rotate(45deg);
+  }
+}

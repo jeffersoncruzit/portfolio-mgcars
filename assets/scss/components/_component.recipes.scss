@@ -1,0 +1,54 @@
+/* RECIPES */
+
+.c-recipes{
+	h1{
+		color: #ffde00;
+		margin-bottom: 10px;
+	}
+	p{
+		color: #ffffff;
+	}
+	.o-textWrap{
+		background: #2550ab;
+		padding: 40px 20px;
+	}
+	.c-card{
+		display: block;
+		&:nth-child(n+3){
+			display: none;
+		}
+	}
+	.o-button{
+		margin: 40px 0;
+	}
+	@include breakpoint(768px){
+		.o-textWrap{
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+		.c-card, .c-card:nth-child(n+3){
+			display: inline-block;
+		}
+		.o-button{
+			display: none;
+		}
+		h1{
+			margin: 0;
+			display: inline-block;
+			width: 49%;
+			vertical-align: middle;
+		}
+		p{
+			display: inline-block;		
+			width: 49%;
+			vertical-align: middle;
+			text-align: left;
+		}
+	}
+	@include breakpoint(1024px){
+		.o-textWrap{
+			max-width: none;
+			padding: 40px 15%;
+		}
+	}
+}

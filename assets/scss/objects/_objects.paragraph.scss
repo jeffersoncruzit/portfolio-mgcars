@@ -1,0 +1,16 @@
+.o-paragraph, p {
+	font-family: $font-secondary;
+	display: inline-block;
+	width: 100%;
+	font-size: 16px;
+	line-height: 28px;
+	font-weight: 500;
+	text-align: left;
+	margin-bottom: 15px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.o-paragraph__wrap {
+	@include clearfix();
+}

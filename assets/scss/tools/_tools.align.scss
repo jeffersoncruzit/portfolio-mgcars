@@ -1,0 +1,23 @@
+@mixin align-center($width, $margin) {
+	max-width: $width;
+	margin:$margin auto;
+}
+
+@mixin align-xy() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+@mixin align-x() {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@mixin align-y() {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}

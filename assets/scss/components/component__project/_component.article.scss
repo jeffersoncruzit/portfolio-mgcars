@@ -1,0 +1,80 @@
+.c-article {
+	@extend .c-about;
+	@include clearfix();
+	padding: 80px 0 0 0;
+	@include breakpoint($s-tablet) {
+		padding: 112px 0 0 0;
+	}
+	h1 {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.o-article__mainWrap {
+		@include clearfix();
+		@include breakpoint($s-desktop) {
+			padding: 80px 0px;
+		}
+	}
+	.o-article__card {
+		position: relative;
+		@include clearfix();	
+		@include breakpoint($s-tablet) {
+			border-style: solid;
+		    border-width: 10px 1px 1px 1px;
+		    border-color: $c-primary #e1e1e1 #e1e1e1 #e1e1e1;			
+		}
+		@include breakpoint($s-desktop) {
+			height: 720px;
+			padding-bottom: 100px;
+		}
+	}
+	.o-article__cardWrap {
+		@include clearfix();
+		max-width: 500px;
+		margin: 0 auto;	
+		margin-bottom: 30px;
+		overflow: hidden;
+		@include breakpoint($s-desktop) {
+			max-width: 100%;
+			display: inline-block;
+			width: 33.3%;
+			padding: 0 20px;
+			float: none;
+			margin-left: -5px;
+			vertical-align: top;
+			margin-bottom: 50px;
+		}
+	}
+	.o-article__infoWrap {
+		@include clearfix();
+		padding: 20px 10px 30px 10px;
+	}
+	.o-article__date {
+		font-family: $font-secondary;
+		font-size: 20px;
+		margin-bottom: 15px;
+	}
+	.o-article__title {
+		font-family: $font-primary;
+		font-weight: 900;
+		text-align: center;
+		font-size: 18px;
+		line-height: 28px;
+		margin: 15px 0;
+	}
+	.o-article__excerpt {
+		@extend .o-paragraph;
+		font-weight: normal;
+		text-align: left;
+		line-height: 28px;
+	}
+	.o-button {
+		margin-top: 20px;
+		@include breakpoint($s-desktop) {
+			width: 150px;
+			margin-top: 0;
+			@include align-x();
+			bottom: 30px;			
+		}
+	}
+}

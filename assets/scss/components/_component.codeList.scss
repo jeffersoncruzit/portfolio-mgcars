@@ -1,0 +1,267 @@
+//CODE LIST
+
+.c-codeList{
+	text-align: left;
+}
+
+.c-codeList__header{
+	background: #019cde;
+	padding: 10px 7px;
+	@include border-radius(3px);
+}
+
+.o-headAction{
+	padding: 10px 0;
+}
+
+.o-colWrap{
+	form{
+		position: relative;
+	}
+	button{
+		text-transform: uppercase;
+		padding: 5px;
+		font-weight: 500;
+		width: 100%;
+		margin: 10px 0;
+		@include border-radius(3px);
+		border: 0;
+		padding: 7px 15px;
+	}
+	input{
+		@include border-radius(3px);
+		border: 1px solid #696969;
+		padding: 6px 15px 6px 25px;
+		font-size: 12px;
+		width: 100%;
+	}
+	.fa-search{
+		color: #95a5a6;
+		position: absolute;
+		top: 6px;
+		margin-left: 5px; 
+	}
+
+	@include breakpoint(768px){
+		display: inline-block;
+		width: 29%;
+		&:nth-of-type(2){
+			float: right;
+			text-align: right;
+		}
+		input{
+			width: 40%;
+		}
+		button{
+			width: auto;
+		}
+		.fa-search{
+			top: 18px;
+		}
+	}
+}
+
+.o-colWrap:nth-of-type(2){
+	button{
+		display: inline-block;
+		width: 49%;
+		margin: 5px 0 0 0;
+	}
+	@include breakpoint(768px){
+		width: 70%;
+		button{
+			width: auto;
+			margin: 10px 0;			
+		}
+	}
+}
+
+.o-codeList__info{
+	h3{
+		display: inline-block;
+		padding: 0 10px;
+		color: #ffffff;
+		text-transform: uppercase;
+		@include breakpoint(768px){
+			display: none;
+		}
+	}
+	input{
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+	}
+	p{
+		display: inline-block;
+		text-transform: uppercase;
+		color: #ffffff;
+		text-align: center;
+		width: 20%;
+		&:first-of-type{
+			width: 40%;
+		}
+		&:last-of-type{
+			width: 10%;
+		}
+	}
+
+	@include breakpoint(768px){
+		text-align: center;
+	}
+}
+
+
+
+.c-codeList__codeItem{
+	position: relative;
+	text-align: center;
+	&::after {
+		display:block;
+	  content: '';
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  margin: auto;
+	  width: 98%;
+	  height: 1px;
+	  background:  #bdc3c7;
+	}
+}
+
+.o-codeList__labels{
+	display: none;
+	@include breakpoint(768px){
+		display: inline-flex;
+		justify-content: space-around;
+		width: 95%;
+		padding: 5px 0;
+	}
+	@include breakpoint(1362px){
+		width: 96%;
+	}
+}
+
+.o-codeItem__checkbox{
+	display: inline-block;
+	width: 30px;
+	padding: 5px;
+	position:relative;
+	bottom: 50px;
+	left: 5px;
+	input{
+		width: 15px;
+		height: 15px;
+	}
+	@include breakpoint(768px){
+		width: 28px;
+		position: static;
+	}
+}
+.o-codeItem__info{
+	display: inline-block;
+	width: 87%;
+	padding: 10px;
+	@include breakpoint(768px){
+		display: inline-flex;
+		justify-content: space-around;
+		width: 94%;
+		padding: 10px 0;
+	}
+	@include breakpoint(1362px){
+		width: 96%;
+	}
+}
+
+.o-codeItem__code, .o-codeItem__category, .o-codeItem__status, .o-codeItem__date{
+	text-align: right;
+	padding: 5px 0;
+	font-size: 14px;
+	transition: all ease 300ms;
+	@include breakpoint(768px){
+		display:inline-block;
+		text-align: center;
+	}
+	@include breakpoint(1024px){
+		font-size: 16px;
+	}
+}
+
+.o-codeItem__code{
+	@include breakpoint(768px){
+		width: 40%;
+	}
+}
+.o-codeItem__code:before {
+	content: "Code:";
+	float: left; 
+	@include breakpoint(768px){
+		content: "";
+	}
+}
+.o-codeItem__category{
+	@include breakpoint(768px){
+		width: 20%;
+	}
+}
+.o-codeItem__category:before { 
+	content: "Category:";
+	float: left;
+	@include breakpoint(768px){
+		content: "";
+	} 
+}
+.o-codeItem__status{
+	select{
+		padding: 5px;
+	}
+	@include breakpoint(768px){
+		width: 20%;
+	}
+}
+.o-codeItem__status:before { 
+	content: "Status:";
+	float: left;
+	position:relative;
+	top: 3px;
+	@include breakpoint(768px){
+		content: "";
+	}
+}
+.o-codeItem__date{
+	@include breakpoint(768px){
+		width: 15%;
+	}
+}
+.o-codeItem__date:before { 
+	content: "Date:";
+	float: left;
+	@include breakpoint(768px){
+		content: "";
+	}
+}
+
+span.o-label{
+	svg{
+		margin-right: 5px;
+	}
+	margin-left: 15px;
+	font-size: 14px;
+	font-weight: 500;
+	font-style:italic;
+	color: #696969;
+}
+
+.o-btnUpdate{
+	padding: 5px;
+	margin: 10px 20px;
+	@include border-radius(3px);
+	border: 1px solid #019cde;
+	background: #019cde;
+	color: #ffffff;
+	font-weight: 500;
+	.fa-edit{
+		color: #ffffff;
+		margin-right: 3px;
+	}
+}

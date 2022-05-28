@@ -1,0 +1,54 @@
+.c-form {
+	font-family: $font-secondary;
+	font-size: 16px;
+	@include clearfix();
+	width: 100%;
+	padding: 30px 0;
+	max-width: 500px;
+	margin: 0 auto;
+	@include breakpoint($s-desktop) {
+		max-width: 1000px;
+	}
+	.o-textarea__wrap {
+		margin: 30px 0 15px 0;
+	}
+	.o-button {
+		margin-top: 30px;
+	}
+	.o-textarea {
+		height: 150px;
+		resize:none;
+	}
+	.o-input__wrap {
+		@include breakpoint($s-desktop) {
+			width: 50%;
+			float: left;
+			&:nth-child(odd) {
+				padding-left: 15px;
+			}
+			&:nth-child(even) {
+				padding-right: 15px;
+			}
+		}
+	}
+	.o-input__wrap--checkbox {
+		display: inline-block;
+		margin-top: 15px;
+		width: 100%;
+		padding: 0;
+		margin-bottom: 20px;
+	}
+	.o-input__checkboxWrap {
+		max-width: 220px;
+	}
+	.o-paragraph__wrap {
+		margin-top: 30px;
+		span {
+			color: $c-primary;
+			font-weight: 600;
+		}
+		.o-paragraph {
+			max-width: 100%;
+		}
+	}
+}

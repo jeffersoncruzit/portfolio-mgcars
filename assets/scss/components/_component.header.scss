@@ -1,0 +1,213 @@
+//HEADER
+
+.c-header {
+  position: relative;
+  z-index: 4;
+  @include clearfix();
+  width: 100%;
+  background-color: #000000;
+  @include breakpoint($s-desktop) {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .o-header__left {
+    position: relative;
+    @include clearfix();
+    width: 100%;
+    padding: 15px;
+    @include breakpoint($s-desktop) {
+      width: 10%;
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0;
+    }
+  }
+  .o-header__logo {
+    display: inline-block;
+    width: 80%;
+    height: 40px;
+    vertical-align: middle;
+    @include background("logo-desktop.png", 40px);
+    @include breakpoint($s-desktop) {
+      height: 50px;
+      width: 270px;
+    }
+    &:before {
+      @include align-y();
+      left: 0;
+      width: 230px;
+      @include breakpoint($s-mobile) {
+        background-image: url($asset_url + "/images/logo-desktop.png");
+        width: 230px;
+      }
+      @include breakpoint($s-desktop) {
+        left: 30px;
+      }
+      @include breakpoint($s-desktop-m) {
+        height: 50px;
+        width: 280px;
+      }
+    }
+  }
+  .o-header__menu {
+    display: inline-block;
+    width: 20%;
+    margin-left: -5px;
+    vertical-align: middle;
+    text-align: right;
+    img {
+      height: 30px;
+      width: auto;
+    }
+    @include breakpoint($s-desktop) {
+      display: none;
+    }
+  }
+  .o-header__right {
+    @include clearfix();
+    width: 100%;
+    display: none;
+    @include breakpoint($s-desktop) {
+      width: 90%;
+      display: inline-block;
+      margin-left: -5px;
+      vertical-align: middle;
+      padding-right: 20px;
+    }
+    ul {
+      @include clearfix();
+      width: 100%;
+      @include breakpoint($s-desktop) {
+        display: inline-block;
+        width: auto;
+        float: right;
+      }
+      .o-header__model {
+        @include breakpoint($s-desktop) {
+          &:hover,
+          &.active {
+            > a {
+              border-bottom: 5px solid #e91112;
+            }
+            .o-header__carWrap {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    li {
+      display: inline-block;
+      width: 100%;
+      @include breakpoint($s-desktop) {
+        width: auto;
+        float: left;
+      }
+      > a {
+        display: inline-block;
+        width: 100%;
+        font-family: $font-primary;
+        font-weight: 500;
+        color: #ffffff;
+        padding: 10px 20px;
+        @include breakpoint($s-desktop) {
+          width: auto;
+          padding: 25px 10px;
+          border-top: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          @include breakpoint($s-desktop-m) {
+            padding: 25px 20px;
+          }
+          &:hover,
+          &.o-header__active {
+            border-bottom: 5px solid #e91112;
+          }
+        }
+      }
+    }
+    .o-header__btn {
+      margin-bottom: 15px;
+      @include breakpoint($s-desktop) {
+        margin-bottom: 0;
+        &:hover,
+        &.o-header__active {
+          border-bottom: 5px solid transparent;
+        }
+      }
+      span {
+        display: inline-block;
+        border-radius: 10px;
+        width: auto;
+        padding: 10px 25px;
+        background-color: $c-primary;
+        @include breakpoint($s-desktop) {
+          display: inline;
+        }
+      }
+    }
+  }
+  .o-header__carWrap {
+    z-index: 1;
+    width: 100%;
+    left: 0;
+    @include breakpoint($s-desktop) {
+      display: none;
+      position: absolute;
+      background-color: $c-primary;
+      padding: 10px;
+    }
+  }
+  .o-header__thumbnail {
+    @include clearfix();
+  }
+  .o-header__cars {
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    @include breakpoint($s-desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  .o-header__car {
+    display: inline-block;
+    width: 100%;
+    float: left;
+    padding: 5px 20px 5px 50px;
+    @include breakpoint($s-tablet) {
+      width: auto;
+    }
+    img {
+      display: inline-block;
+      width: 70px;
+      height: auto;
+      vertical-align: middle;
+      @include breakpoint($s-desktop) {
+        display: block;
+        height: 100px;
+        width: auto;
+        margin: 0 auto;
+        vertical-align: initial;
+      }
+    }
+    span {
+      display: inline-block;
+      color: #ffffff;
+      text-align: center;
+      font-family: $font-primary;
+      font-size: 12px;
+      font-weight: 500;
+      margin-left: 15px;
+      vertical-align: middle;
+      @include breakpoint($s-desktop) {
+        display: block;
+        font-size: 16px;
+        margin-top: 5px;
+        margin-left: 0;
+      }
+    }
+  }
+}

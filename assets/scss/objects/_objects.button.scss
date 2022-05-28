@@ -1,0 +1,71 @@
+/* BUTTONS STYLE in class formed*/
+%o-btn{
+	display: inline-block;
+	vertical-align: middle;
+
+	padding:$p-xs;
+	text-decoration: none;
+	cursor: pointer ;
+	font-size: em(14);
+	font-family: $font-primary;
+	text-align: center;
+	outline:none;
+}
+
+
+.o-button{
+	@extend %o-btn;
+	background: $c-primary;
+	padding: 15px 35px;
+	color:$c-white;
+	border:none;
+	@include border-radius(5px);
+}
+.o-button--white{
+	background: none;
+	border: 1px solid  #ffffff;
+	@include border-radius(0px);
+}
+
+.o-btn__primary{
+	@extend %o-btn;
+	background-color:$c-primary;
+	color:$c-white;
+	border:none;
+	@include hover-bg($c-black);
+}
+
+.o-btn__secondary {
+	@extend %o-btn;
+	background-color: $c-secondary;
+	color:$c-white;
+	border:none;
+	@include hover-bg($c-black);
+}
+
+.o-btn__cta {
+	@extend %o-btn;
+	background-color: $c-cta;
+	color:$c-white;
+	border:none;
+	@include hover-bg($c-black);
+}
+
+/* with icons */
+.o-btn__iconholder {
+	display: inline-block;
+	padding:$p-none $p-xxs;
+}
+
+/* full width */
+
+.o-btn__fullwidth {
+	display: block;
+	width: 100%;
+	margin:$m-xxs $m-none;
+}
+
+/* disabled */
+.o-btn__disabled {
+	@extend %o-btn;
+}

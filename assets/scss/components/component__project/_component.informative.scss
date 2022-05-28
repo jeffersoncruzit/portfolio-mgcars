@@ -1,0 +1,43 @@
+/* ABOUT, FAQ */
+
+.c-about, .c-faq{
+	text-align: center;
+	padding: 50px 20px 30px 20px;
+	max-width: 1000px;
+	margin: 0 auto;
+	@include breakpoint($s-desktop) {
+		padding: 80px;
+	}
+	h1{
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	h3{
+		font-weight: 900;
+		color: #333030;
+		margin: 20px 0;
+	}
+	h4{
+		font-weight: 900;
+		color: $c-primary;
+		margin: 35px 0 20px 0;
+	}
+	p{
+		font-weight: normal;
+		line-height: initial;
+		span{
+			font-style: italic;
+			font-weight: 600;
+			color: $c-primary;
+		}
+	}
+	.o-sectionWrap{
+		margin: 40px 0;
+	}
+	@include breakpoint(768px){
+		width: 90%;
+		.o-textWrap{
+			width: 70%;
+		}
+	}
+}

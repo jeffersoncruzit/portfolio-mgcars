@@ -1,0 +1,10 @@
+/* 
+ * ELLIPSIS
+ * shortcut for creating a ellipsis
+*/
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

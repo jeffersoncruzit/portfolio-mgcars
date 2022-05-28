@@ -1,0 +1,21 @@
+// SIDEBAR
+
+.c-mainContent{
+	padding: 20px;
+	background: #ffffff;
+	@include breakpoint(768px){
+		display: inline-block;
+		vertical-align: top;
+		width: 81%;
+	}
+}
+
+.--left{
+	text-align: left;
+}
+
+.o-headAction{
+	.o-colWrap{
+		text-align: left;
+	}
+}

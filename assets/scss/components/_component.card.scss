@@ -1,0 +1,45 @@
+/* CARD */
+
+.c-card{
+	position: relative;
+	.o-card__wrap{
+		display:block;
+	}
+	.o-card__title{
+		position: absolute;
+		top: 50%;
+		display: block;
+		width: 100%;
+		color: #ffffff;
+	}
+	.o-card__bgImg{
+		background: #1e1e1e;
+		img{
+			opacity: 0.5;
+			width: 100%;
+		}
+	}
+	@include breakpoint(768px){
+		display:inline-block;
+		/* width: 33%; */
+		/* --span: initial; avoid inheritance
+			  --percentage: calc(var(--span) * 100%);
+			  width: var(--percentage, initial);
+		--span: 4/12;
+		$gutters: 0; */
+		width: percentage(4/12);
+		/* margin: 0 -2px; */
+		.o-card__title{
+			padding: 10px 0;
+			color: #000000;
+			background: rgba(#ffffff, 0.5);
+			top: auto;
+			bottom: 0;
+		}
+		.o-card__bgImg{
+			img{
+				opacity: 1;
+			}
+		}
+	}
+}

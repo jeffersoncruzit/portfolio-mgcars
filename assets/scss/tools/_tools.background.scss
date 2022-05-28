@@ -1,0 +1,12 @@
+@mixin background($image, $size) {
+  position: relative;
+  &:before {
+    content: "";
+    width: $size;
+    height: $size;
+    position: absolute;
+    background-image: url($asset_url + "/images/" + $image);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

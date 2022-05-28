@@ -1,0 +1,89 @@
+.c-timeline {
+  z-index: 3;
+  @include clearfix();
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  position: relative;
+  .o-timeline__content {
+    position: relative;
+    @include clearfix();
+    width: 100%;
+    padding: 0 30px;
+    @include breakpoint($s-desktop) {
+      max-width: 1000px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .o-timeline__year {
+    font-family: $font-primary;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .slick-slide {
+    position: relative;
+    outline: none;
+    padding: 40px 0;
+    &:hover {
+      cursor: pointer;
+      &:before {
+        position: absolute;
+        content: "";
+        width: 40px;
+        height: 6px;
+        background-color: $c-primary;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+      }
+    }
+  }
+  .slick-arrow {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    border: none;
+    background: none;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 0;
+    color: transparent;
+  }
+  .slick-prev {
+    background-image: url($asset_url + "/images/timeline-left.svg");
+    left: 5px;
+  }
+  .slick-next {
+    background-image: url($asset_url + "/images/timeline-right.svg");
+    right: 5px;
+  }
+  .timeline-current {
+    position: relative;
+    .o-timeline__year {
+      &:before {
+        position: absolute;
+        content: "";
+        width: 40px;
+        height: 6px;
+        background-color: $c-primary;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.c-timeline--fixed {
+  position: fixed;
+  top: 0;
+  @include breakpoint($s-desktop) {
+    top: 79px;
+  }
+}

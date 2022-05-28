@@ -1,0 +1,13 @@
+.o-mainwrap{
+	.o-bg__geometry{
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+		width: 50%;
+		@include breakpoint($s-desktop) {
+			width: 70%;
+			top: 79px;
+		}
+	}
+}

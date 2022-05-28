@@ -1,0 +1,46 @@
+%heading {
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 100%;
+	font-family: $font-secondary;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #000000;
+	text-align: left;	
+}
+
+.o-heading__h1, h1 {
+	@extend %heading;
+	font-size: 30px;
+	margin-bottom: 15px;
+	@include breakpoint($s-desktop) {
+		font-size: 60px;
+	}
+}
+.o-heading__h2, h2 {
+	// @extend %heading;
+	font-size: 24px;
+	// margin-bottom: 15px;
+}
+.o-heading__h3, h3 {
+	@extend %heading;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.o-heading__wrap {
+	@include clearfix();
+	@include breakpoint($s-desktop) {
+		margin-bottom: 40px;
+	}
+	h1 {
+		@include breakpoint($s-mobile) {
+			max-width: 380px;
+		}
+		@include breakpoint($s-desktop) {
+			max-width: 380px;
+			margin-bottom: 50px;
+		}
+	}
+}

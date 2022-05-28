@@ -1,0 +1,165 @@
+/* INPUTS */
+%input {
+	width: 100%;
+	color: #000000;
+	border: 3px solid #dfdfdf;
+	background-color: transparent;
+	padding: 15px 10px 10px 10px;
+	font-size: 16px;
+}
+
+.o-input__text {
+	@extend %input;
+	&:focus {
+		border: 3px solid $c-primary;
+	}
+}
+
+.o-input {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 15px;
+	border-bottom: 2px solid $c-white;
+
+	input:focus ~ .o-input__label--float,
+	input:not(:focus):valid ~ .o-input__label--float {
+	  color: #000000;
+	  top: 5px;
+	  left: 12px;
+	  transform: none;
+	  font-size: 10px;
+	  opacity: 1;
+	}
+
+	.o-input__label--float {
+	  font-size: 16px;
+	  font-weight: 600; 
+	  color: #000000;
+	  position: absolute;
+	  pointer-events: none;
+	  left: 10px;
+	  @include align-y();
+	  transition: 0.2s ease all;
+	}
+}
+
+.o-input__checkboxWrap {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	float: left;
+	text-align: left;
+	padding: 10px 10px 10px 35px;
+	label {
+		font-weight: 600;
+		font-size: 16px;
+	}
+}
+
+.o-input__checkbox {
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	height: 25px;
+    left: 0;
+    opacity: 0;
+    @include align-y();
+    &:hover {
+    	cursor: pointer;
+    }
+}
+
+.o-input__checkbox:checked ~ .o-input__checkboxIndicator:before {
+  content: '';
+}
+
+.o-input__checkboxIndicator {
+	z-index: 0;
+	position: absolute;
+	left: 0;
+	@include align-y();
+	width: 20px;
+	height: 20px;
+	border: 2px solid #000000;
+	&:before {
+		position: absolute;
+		@include align-xy();
+		content: none;
+		width: 14px;
+		height: 14px;
+		background-image: url('../images/checked.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}
+
+.o-input__selectWrap {
+	display: block;
+	width: 100%;
+}
+
+.o-input__select {
+	font-size: 16px;
+	font-family: $font-secondary;
+	font-weight: bold;
+	border: 3px solid #dfdfdf;
+	height: 50px;
+	width: 100%;
+	padding: 0 10px;
+	outline: none;
+}
+
+
+/* with icon */
+
+.o-input__wrap {
+	display: block;
+	width: 100%;
+}
+
+.o-input__wrap--checkbox {
+	display: block;
+	width: 100%;
+}
+
+.o-input__icon {
+	padding:$p-none $p-xs ;
+	position: absolute;
+	top:5px;
+}
+
+.o-input__holder {
+	width: 100%;
+	padding-left:$p-xl;
+}
+
+.o-input__wrap--reverse {
+	.o-input__icon{
+		right:5px;
+	}
+
+	.o-input__holder {
+		padding-left:0;
+		padding-right:$p-xl;
+	}
+}
+
+/* input with submit button */
+
+.o-input__form {
+	.o-btn__primary {
+		display: table-cell;
+	}
+}
+
+/* radio button */
+
+.o-input__radio {
+	display: none;
+
+	+ label span {
+		display: inline-block;
+		
+	}
+}

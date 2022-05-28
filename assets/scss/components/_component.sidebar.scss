@@ -1,0 +1,13 @@
+// SIDEBAR
+
+.c-sidebar{
+	@include breakpoint(768px){
+		display: inline-block;
+		float: left;
+		width: 19%;
+		height: 100vh;
+		padding: 20px 0;
+		background: #019cde;
+		text-align: center;
+	}
+}

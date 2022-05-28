@@ -1,0 +1,125 @@
+$asset_url: "https://jeffersoncruzit.github.io/portfolio-mgcars/assets";
+.c-header {
+  background-color: yellow;
+}
+// @import "bower_components/susy/sass/susy";
+// @import "bower_components/compass-breakpoint/stylesheets/breakpoint";
+
+/*
+ * SETTINGS
+ * variables
+*/
+@import "settings/_settings.color.scss";
+@import "settings/_settings.font.scss";
+@import "settings/_settings.spacing.scss";
+@import "settings/_settings.screen.scss";
+
+/*
+ * GENERIC
+ * 3rd Party
+*/
+@import "generic/_generic.reset.scss";
+@import "generic/_generic.clearfix.scss";
+
+/*
+ * TOOLS
+ * Mixins and function (no actual CSS output)
+*/
+@import "tools/_tools.shadow.scss";
+@import "tools/_tools.border.scss";
+@import "tools/_tools.rotate.scss";
+@import "tools/_tools.corner.scss";
+@import "tools/_tools.ellipsis.scss";
+@import "tools/_tools.breakpoint.scss";
+@import "tools/_tools.font.scss";
+@import "tools/_tools.hover.scss";
+@import "tools/_tools.align.scss";
+@import "tools/_tools.clearfix.scss";
+@import "tools/_tools.background.scss";
+@import "tools/_tools.circle.scss";
+@import "tools/_tools.ratio.scss";
+
+/*
+ * ELEMENTS
+ * HTML elements
+*/
+@import "elements/_elements.body.scss";
+@import "elements/_elements.button.scss";
+@import "elements/_elements.input.scss";
+@import "elements/_elements.link.scss";
+@import "elements/_elements.table.scss";
+@import "elements/_elements.inline.scss";
+@import "elements/_elements.list.scss";
+@import "elements/_elements.heading.scss";
+
+/*
+ * TRUMPS
+ * Overriding / !important
+*/
+
+/*
+ * OBJECT
+ * Layout Classes
+ * .o-
+*/
+@import "objects/_objects.button.scss";
+@import "objects/_objects.input.scss";
+@import "objects/_objects.image.scss";
+@import "objects/_objects.icon.scss";
+@import "objects/_objects.list.scss";
+@import "objects/_objects.wrap.scss";
+@import "objects/_objects.heading.scss";
+@import "objects/_objects.label.scss";
+@import "objects/_objects.textarea.scss";
+@import "objects/_objects.video.scss";
+@import "objects/_objects.paragraph.scss";
+@import "objects/_objects.notification.scss";
+@import "objects/_objects.content.scss";
+
+/*
+ * COMPONENTS
+ * UI Classes
+ * .c-
+*/
+@import "components/_component.header.scss";
+@import "components/_component.footer.scss";
+@import "components/_component.sidebar.scss";
+@import "components/_component.pagination.scss";
+@import "components/_component.main.scss";
+@import "components/_component.menu.scss";
+@import "components/_component.input.scss";
+@import "components/_component.login.scss";
+@import "components/_component.accordion";
+@import "components/_component.card.scss";
+@import "components/_component.codeList.scss";
+@import "components/_component.user.scss";
+@import "components/_component.popup.scss";
+@import "components/_component.tableList.scss";
+@import "components/_component.perfectScrollBar.scss";
+@import "components/_component.slider.scss";
+@import "components/_component.banner.scss";
+@import "components/_component.slick.scss";
+@import "components/_component.slant.scss";
+@import "components/_component.form.scss";
+@import "components/_component.cookie.scss";
+
+/* MG Cars Components */
+@import "components/component__project/_component.home.scss";
+@import "components/component__project/_component.informative.scss";
+@import "components/_component.boxlinks.scss";
+@import "components/component__project/_component.book.scss";
+@import "components/component__project/_component.model.scss";
+@import "components/component__project/_component.article.scss";
+@import "components/component__project/_component.article-inner.scss";
+@import "components/component__project/_component.dealers.scss";
+@import "components/component__project/_component.history.scss";
+@import "components/component__project/_component.timeline.scss";
+@import "components/component__project/_component.thankyou.scss";
+
+/*
+ * STYLEGUIDE
+ * for styleguide purpose only
+ * .sg-
+*/
+
+@import "styleguide.scss";

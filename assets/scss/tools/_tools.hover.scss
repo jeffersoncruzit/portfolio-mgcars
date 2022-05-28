@@ -1,0 +1,12 @@
+@mixin hover-bg($bg) {
+	&:hover {
+		background-color:$bg;
+	}
+}
+
+@mixin hover-text-bg($bg, $text) {
+	&:hover {
+		background-color: $bg;
+		color: $text;
+	}
+}

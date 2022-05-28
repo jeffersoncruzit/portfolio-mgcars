@@ -1,0 +1,35 @@
+.o-mainwrap{
+	text-align:center;
+	position: relative;
+	@include clearfix();
+	@include breakpoint($s-desktop) {
+		padding-top: 79px;
+	}
+}
+
+.o-wrap {
+	@include clearfix();
+	margin: 0 auto;
+	max-width: 1500px;
+}
+
+.o-wrap__content {
+	@include clearfix();
+}
+
+.--white{
+	background: #ffffff;
+}
+
+.o-imgWrap {
+	display: block;
+	width: 100%;
+	img{
+		display: block;
+		width: 100%;
+	}
+}
+
+.o-textWrap{
+	text-align: left;
+}

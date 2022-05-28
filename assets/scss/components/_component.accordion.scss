@@ -1,0 +1,26 @@
+/* ACCORDION */
+
+.c-accordion{
+	margin: 0 auto; 
+	background: #ffffff;
+	.o-accord__toggle{
+		display: block;
+		width: 100%;
+		border: 0;
+		padding: 10px; 
+		background: #019cde;
+		color: #ffffff;
+		text-transform: uppercase; 
+		font-weight: 500;
+	}
+	.o-accord__content{
+		overflow: hidden;
+		height: auto;
+		max-height: 0;
+		transition: max-height ease 300ms;
+	}
+	.o-accord__active + .o-accord__content{
+		max-height: 800px;
+	}
+}
+

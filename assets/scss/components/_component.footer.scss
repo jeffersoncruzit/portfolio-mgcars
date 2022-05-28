@@ -1,0 +1,118 @@
+.c-footer {
+	@include clearfix();
+	width: 100%;
+	background-color: #e81011;
+	color: #FFFFFF;
+	font-family: $font-secondary;
+	font-size: 14px;
+	padding: 30px 10px;
+	@include breakpoint($s-desktop) {
+		padding: 30px;
+	}
+	a {
+		color: #ffffff;
+	}
+	.o-footer__upper {
+		position: relative;
+		@include clearfix();
+		width: 100%;
+		@include breakpoint($s-desktop) {
+			padding: 10px 300px 10px 0;
+		}
+	}
+	.o-footer__menu {
+		@include clearfix();
+		a {
+			display: inline-block;
+			width: 100%;
+			padding: 5px;
+			font-weight: 500;
+			@include breakpoint($s-desktop) {
+				padding: 5px 10px;
+				width: auto;
+				float: left;
+			}
+		}
+		li {
+			&:first-child {
+				@include breakpoint($s-desktop) {
+					a {
+						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+	.o-footer__lower {
+		@include clearfix();
+		width: 100%;
+		border-top: 1px solid #f48888;
+		padding-top: 25px;
+		margin-top: 15px;
+	}
+	.o-footer__social {
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 15px;
+		@include breakpoint($s-desktop) {
+			width: auto;
+			float: left;
+			margin: 0;
+		}
+		img {
+			width: 25px;
+		}
+		li {
+			display: inline-block;
+			width: auto;
+			margin-right: 15px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		a {
+			display: inline-block;
+			width: auto;
+			float: left;
+		}
+	}
+	.o-footer__address {
+		display: block;
+		@include breakpoint($s-desktop) {
+			display: inline-block;
+			float: right;
+		}
+		li {
+			padding: 5px;
+			font-weight: 500;
+			&:first-child {
+				font-weight: 900;
+				font-size: 18px;
+			}
+			@include breakpoint($s-desktop) {
+				padding: 0;
+				text-align: right;
+			}
+		}
+		.o-footer__bold {
+			font-size: 18px;
+			font-weight: bold;
+		}
+	}
+	.o-footer__logo {
+		display: block;
+		margin-top: 15px;
+		@include breakpoint($s-desktop) {
+			position: absolute;
+			right: 0;
+			@include align-y();
+			margin-top: 0;
+		}
+		img {
+			width: 100%;
+			max-width: 300px;
+			margin: 0 auto;
+		}
+	}
+}

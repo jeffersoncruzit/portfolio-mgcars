@@ -1,0 +1,28 @@
+/* Login */
+
+.c-login{
+	text-align: left;
+	margin: 0 auto;
+	width: 80%;
+	max-width: 350px;
+	h2{
+		font-weight: 500;
+	}
+	form{
+		input, button{
+			display: block;
+			width: 100%;
+			margin: 10px 0;
+			padding: 10px;
+			@include border-radius(3px);
+			border: 1px solid gray;
+		}
+		button{
+			background: #019cde;
+			border: 1px solid #019cde;
+			color: #ffffff;
+			font-weight: 500;
+			cursor: pointer;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+/* SHADOW */
+
+@mixin box-shadow($blur, $x, $y, $color) {
+	box-shadow: $blur $x $y $color;
+}
+
+@mixin inset-shadow($blur, $x, $y, $color) {
+	box-shadow: inset $blur $x $y $color;
+}
+
+@mixin text-shadow($h-shadow, $v-shadow, $color) {
+	text-shadow: $h-shadow $v-shadow $color;
+}

@@ -1,0 +1,51 @@
+.c-banner {
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	padding: 40px 10px;
+	@include breakpoint($s-tablet) {
+		padding: 0;
+		background-image: none;
+	}
+	img {
+		display: none;
+		@include breakpoint($s-tablet) {
+			position: relative;
+			z-index: 1;
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+.o-banner__title {
+	font-family: 'Lora';	
+	font-size: 40px;
+	font-weight: bold;
+	color: #0f57c4;
+	text-align: center;
+	@include breakpoint($s-desktop) {
+		font-size: 60px;
+	}
+}
+
+.o-banner__caption {
+	font-family: 'Lato';	
+	font-size: 16px;
+	color: #000000;
+	text-align: center;
+	@include breakpoint($s-desktop) {
+		font-size: 22px;
+	}
+}
+
+.o-banner__wrap {
+	@include breakpoint($s-tablet) {
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+}

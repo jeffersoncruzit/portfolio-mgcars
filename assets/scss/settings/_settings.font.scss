@@ -1,0 +1,40 @@
+/* 
+ * FONT VARIABLES 
+ * variables for:
+ * font family use
+ * font weight
+ * 
+*/
+// @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Lora:400,400i,700,700i');
+// @import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway');
+$font-primary:'Montserrat', sans-serif;
+$font-secondary:'Raleway', sans-serif;
+
+/* font weight */
+
+$lightest: 100;
+$lighter: 200;
+$light: 300;
+$regular: 400;
+$semi-medium: 500;
+$medium: 600;
+$bold: 700;
+$bolder: 800;
+$boldest:900;
+
+
+// @font-face {
+//     font-family: 'lorabold';
+//     src: url('../font/lora-bold-webfont.woff2') format('woff2'),
+//          url('../font/lora-bold-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'latoregular';
+//     src: url('../font/lato-regular-webfont.woff2') format('woff2'),
+//          url('../font/lato-regular-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }

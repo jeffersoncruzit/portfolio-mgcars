@@ -1,0 +1,158 @@
+.c-dealers {
+	@extend .c-about;
+	@include clearfix();
+	padding: 80px 0 0 0;
+	@include breakpoint($s-tablet) {
+		padding: 112px 0 0 0;
+	}
+	h1 {
+		padding-left: 20px;
+		padding-right: 20px;
+		@include breakpoint($s-desktop) {
+			padding: 0 5px;
+		}
+	}
+	.o-heading__wrap {
+		h1 {
+			@include breakpoint($s-mobile) {
+				text-align: center;
+				max-width: 100%;
+			}
+			@include breakpoint($s-desktop) {
+				max-width: 380px;
+				text-align: left;
+			}			
+		}
+	}
+	.o-heading__wrap--sub {
+		display: inline-block;
+		width: 100%;
+		margin: 20px 0;
+		@include breakpoint($s-desktop) {
+			margin: 50px 0;
+		}
+		h1 {
+			display: inline-block;
+			width: 100%;
+			@include breakpoint($s-mobile) {
+				text-align: center;
+				max-width: 100%;
+			}
+			@include breakpoint($s-desktop) {
+				text-align: left;
+			}	
+		}
+	}
+	h2 {
+		width: 100%;
+		text-align: center;
+		font-weight: normal;
+		margin: 20px 0;
+		@include breakpoint($s-desktop) {
+			text-align: left;
+			margin-left: 10px;
+		}
+	}
+	h4 {
+		text-align: left;
+		color: #000000;
+		margin: 0 0 20px 0;
+	}
+	p {
+		span {
+			color: #000000;
+			font-weight: bold;
+		}		
+	}
+	.o-input__selectWrap {
+		margin: 0 auto;
+		max-width: 300px;
+		margin-bottom: 15px;
+		@include breakpoint($s-desktop) {
+			margin: 0;
+			margin-bottom: 15px;
+			margin-left: 10px;
+			display: inline-block;
+			float: left;
+		}
+	}
+	.o-dealers__mainWrap {
+		@include clearfix();
+		padding: 30px 0;
+		@include breakpoint($s-desktop) {
+			padding: 80px 0px;
+		}
+	}
+	.o-dealers__card {
+		border-style: solid;
+		border-width: 10px 1px 1px 1px;
+		border-color: #e81011 #e1e1e1 #e1e1e1 #e1e1e1;
+		padding: 30px 20px;
+		@include breakpoint($s-desktop) {
+			padding: 40px 20px;
+		}
+	}
+	.o-dealers__cardWrap {
+		display: block;
+		width: 100%;
+		@include breakpoint($s-desktop) {
+			display: inline-block;
+			width: 33.3%;
+			float: none;
+			margin-left: -5px;
+			vertical-align: top;
+			padding: 15px;
+			margin-bottom: 30px;
+		}
+	}
+	.o-dealers__region {
+		@include clearfix();
+		margin: 0 auto;
+		margin-bottom: 20px;
+		max-width: 500px;
+		&:last-child {
+			@include breakpoint($s-desktop) {
+				border: none;
+			}
+		}
+		@include breakpoint($s-desktop) {
+			max-width: 100%;
+			display: inline-block;
+			text-align: left;
+			// border-bottom: 1px solid #e1e1e1;	
+		}
+	}
+	.o-dealers__regionWrap {
+		@include clearfix();
+		width: 100%;
+		margin-bottom: 30px;
+		&:last-child {
+			border-bottom: none;
+		}
+		@include breakpoint($s-desktop) {
+			display: inline-block;
+			width: 100%;
+			margin-bottom: 50px;
+			border-bottom: 1px solid #e1e1e1;		
+		}
+	}
+	.o-dealers__legend {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		padding: 20px;
+		max-width: 500px;
+		@include breakpoint($s-desktop) {
+			display: inline-block;
+			width: 100%;
+			max-width: 100%;
+			margin-bottom: 20px;
+		}
+		h4 {
+			margin-bottom: 10px;
+		}
+		p {
+			margin-bottom: 0px;
+		}
+	}
+}

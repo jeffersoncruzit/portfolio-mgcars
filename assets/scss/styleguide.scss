@@ -1,0 +1,170 @@
+/* 
+ * STYLEGUIDE
+ * for styleguide purposes only
+ * 
+*/
+
+.sg-wrap {
+	@include align-center(800px, 0);
+	padding:$p-l $p-none;
+}
+
+.sg-shadow {
+	@include box-shadow(0px,0px,4px,rgba(0,0,0,0.2));
+	padding:$p-s;
+}
+
+.sg-title {
+	padding:$p-s $p-none;
+}
+
+.sg-title--secondary {
+	color:#878080;
+}
+
+.sg-content {
+	background-color: $c-white;
+	padding:$p-s;
+	margin-bottom:$m-s;
+}
+
+/* sg content */
+code {
+	display: block;
+	padding:$p-s;
+	background-color: #333333;
+	color:$c-white;
+	margin:$m-xxs $m-none;
+}
+
+.sg-example{
+	padding:$p-s;
+	margin:$m-s $m-none;
+	font-size: em(12);
+}
+
+/* MIXINS */
+
+	/* ALIGNMENT */
+
+	.sg-aligncenter {
+		@include align-center(200px, 0);
+	}
+
+	/* BORDER */
+	.sg-borderall {
+		@include border-all(5px,solid,green);
+	}
+
+	.sg-bordertop {
+		@include border-top(5px, solid, green);
+	}
+
+	.sg-borderbottom{
+		@include border-bottom(5px, solid, green);
+	}
+
+	.sg-borderleft{
+		@include border-left(5px, solid, green);
+	}
+
+	.sg-borderright{
+		@include border-right(5px, solid, green);
+	}
+
+	/* CORNER */
+	.sg-cornerradius {
+		border:solid;
+		@include border-radius(100px);
+	}
+
+	.sg-cornertop {
+		border:solid;
+		@include border-top-radius(100px);
+	}
+
+	.sg-cornerright {
+		border:solid;
+		@include border-right-radius(100px);
+	}
+
+	.sg-cornerbottom {
+		border:solid;
+		@include border-bottom-radius(100px);
+	}
+
+	.sg-cornerleft {
+		border:solid;
+		@include border-left-radius(100px);
+	}
+
+	/* ELLIPSIS */
+
+	.sg-for-ellipsis {
+		@include ellipsis;
+		width: 100%;
+	}
+
+	/* FONT MIXIN */
+
+	/* HOVER MIXIN */
+	.sg-hoverbg {
+		background-color: green;
+		cursor:pointer;
+		@include hover-bg(blue);
+	}
+
+	.sg-hovertextbg {
+		cursor:pointer;
+		@include hover-text-bg(blue, $c-white);
+	}
+
+	/* SHADOW */
+
+	.sg-boxshadow {
+		@include box-shadow(1px, 0px, 20px, rgba(0,0,0,0.4));
+	}
+
+	.sg-insetshadow {
+		@include inset-shadow(1px, 0px, 20px, rgba(0,0,0,0.4));
+	}
+
+	.sg-textshadow {
+		h3 {
+			@include text-shadow(2px,5px, rgba(0,0,0,0.4));
+		}
+	}
+
+/* END OF MIXINS */
+
+/* VARIABLES */
+	
+	/* COLORS */
+	.sg-color {
+		margin:0;
+	}
+	
+	/* FONT */
+
+	.sg-varFont {
+		margin:0;
+	}
+	
+	/* SPACING */
+
+	.sg-varspacing {
+		margin:0;
+	}
+
+/* END OF VARIABLES */
+
+/* ELEMENTS */
+
+	/* BUTTONS */
+	.sg-buttons {
+		padding:$p-xs $p-none;
+	}
+
+	/*  */
+
+/* END OF ELEMENTS */
